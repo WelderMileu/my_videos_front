@@ -1,25 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Container, ViewOptions, TextOptions } from './style';
-import ContainerVideos from '../ContainerVideos';
+import VideosFull from '../VideosFull';
+import VideosFavorite from '../VideosFavorite';
 
 const Content = () => {
+	const [ page, setPage ] = useState(1);
+
 	return (
 		<React.Fragment>
 			<Container>
+
+				{/* Menu da nossa aplicação */}
 				<ViewOptions>
-					<TextOptions 
+					<TextOptions
+						onClick= { () => setPage(1) } 
 						bold 
-						color="var(--color-purple-light)" 
-						actived>
+						color="var(--color-purple-light)"
+						>
 						Todos os Videos
 					</TextOptions>
-					<TextOptions bold>
+					<TextOptions
+						onClick={() => setPage(2) }  
+						bold>
 						Favoritos
 					</TextOptions>
 				</ViewOptions>
 			</Container>
-			<ContainerVideos />
+
+			{/* Alternando paginas */}
+			{ page === 1 ? <VideosFull /> : <VideosFavorite /> }
+		
 		</React.Fragment>
 	)
 }

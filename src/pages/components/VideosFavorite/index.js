@@ -2,12 +2,11 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ReactLoading from 'react-loading';
 
-import { FaGoogle, FaStar } from 'react-icons/fa';
-
-import { ContainerView, LoadingPage } from './style';
+import { FaStar } from 'react-icons/fa';
+import { ContainerView, LoadingPage } from '../VideosFull/style';
 import Video from '../Video';
 
-const ContainerVideos = () => {
+const VideosFavorite = () => {
 	const [item, setItem] = useState([]);
 	const [load, setLoad] = useState(false);
 
@@ -39,18 +38,20 @@ const ContainerVideos = () => {
 		return (
 
 			<ContainerView>
-				{ item.map(video => (
-						<Video 
-							key={ video._id } 
-							url={ video.url } 
-							title={ video.title }
-							favorite={ video.favorite ? <FaStar /> : "" }
-						/>
-					))
+				{ 	
+					item.filter((item) => item.favorite === true)
+						.map(video => (
+							<Video 
+								key={ video._id } 
+								url={ video.url } 
+								title={ video.title }
+								favorite={ video.favorite ? <FaStar /> : "" }
+							/>
+						))
 				}
 			</ContainerView>
 		)
 	}
 }
 
-export default ContainerVideos;
+export default VideosFavorite;
