@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import ReactLoading from 'react-loading';
 
-import { ContainerView } from './style';
+import { ContainerView, LoadingPage } from './style';
 import Video from '../Video';
 
 const ContainerVideos = () => {
@@ -9,19 +10,30 @@ const ContainerVideos = () => {
 	const [load, setLoad] = useState(false);
 
 	useEffect(() => {
-		async function videos(){
+
+		(async function videos(){
 			const list = await axios.get('http://localhost:3000');
 			setItem(list.data);
 			setLoad(true)
-		}
+		})();
 
-		videos()
 	},[])
 
 	console.log(item)
 
-	if(!load) { return <p>Carregando ...</p> } 
-		else {
+	if(!load) { 
+		return (
+			<LoadingPage>
+				<ReactLoading 
+					type="spin"
+					color="var(--color-purple-light)"
+					width="30px"
+					height="5px"
+				/>
+				<p>Carregando ...</p> 
+			</LoadingPage>
+		)
+	} else {
 		return (
 			<ContainerView>
 				{ item.map(video => (

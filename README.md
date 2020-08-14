@@ -5,7 +5,7 @@
 #### Tecnologias usadas na aplicação
 
 - React JS
-= styled-componets
+- styled-componets
 - axios
 - Gatsby
 

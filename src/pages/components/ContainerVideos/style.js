@@ -22,3 +22,25 @@ export const ContainerView = styled.div`
 		border-radius: 20px;
 	}
 `;
+
+export const LoadingPage = styled.div`
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	margin-top: 100px;
+	
+	p {
+		margin-top: 30px;
+		font-weight: bold;
+		color: var(--color-gray-light)
+	}
+`;
+
+
+
+
+
+
+
+
