@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import ReactLoading from 'react-loading';
 
+import { FaGoogle, FaStar } from 'react-icons/fa';
+
 import { ContainerView, LoadingPage } from './style';
 import Video from '../Video';
 
@@ -35,13 +37,14 @@ const ContainerVideos = () => {
 		)
 	} else {
 		return (
+
 			<ContainerView>
 				{ item.map(video => (
 						<Video 
-							key={video._id} 
-							url={video.url} 
-							title={video.title}
-							date={video._id}
+							key={ video._id } 
+							url={ video.url } 
+							title={ video.title }
+							favorite={ video.favorite ? <FaStar /> : "" }
 						/>
 					))
 				}

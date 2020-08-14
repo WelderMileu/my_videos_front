@@ -10,9 +10,12 @@ export const CardTitle = styled.p`
 	max-width: 460px;
 `;
 
-export const CardText = styled.p`
-	font-size: 1rem;
-	color: var(--color-gray-light);
+export const Favorite = styled.p`
+	font-size: 1.2rem;
+	color: var(--color-purple-light);
+	margin-top: 5px;
+	display: flex;
+	justify-content: flex-start;
 `;
 
 export const CardIcons = styled.div`

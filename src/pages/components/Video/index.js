@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaPen, FaTrash } from 'react-icons/fa'; 
 
-import { Card, CardTitle, CardText, CardIcons, Icons } from './style'
+import { Card, CardTitle, Favorite, CardIcons, Icons } from './style'
 
 const Video = ( props ) => {
 	return (
@@ -23,7 +23,7 @@ const Video = ( props ) => {
 				allowfullscreen>
 			</iframe>
 			<CardTitle>{ props.title } </CardTitle>
-			<CardText>{ props.date }</CardText>
+			<Favorite>{ props.favorite }</Favorite>
 		</Card>
 	)
 }
