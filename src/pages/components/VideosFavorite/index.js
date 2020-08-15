@@ -18,7 +18,8 @@ const VideosFavorite = () => {
 			setLoad(true)
 		})();
 
-	},[]);
+
+	},[]);							
 
 	if(!load) { 
 		return (
@@ -34,10 +35,8 @@ const VideosFavorite = () => {
 		)
 	} else {
 		return (
-
 			<ContainerView>
-				{ 	
-					item.filter((item) => item.favorite === true)
+				{item.filter((item) => item.favorite === true)
 						.map(video => (
 							<Video 
 								key={ video._id } 
