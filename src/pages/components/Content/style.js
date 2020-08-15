@@ -14,7 +14,7 @@ export const ViewOptions = styled.div`
 export const TextOptions = styled.p`
 	padding: 10px 20px;
 	font-weight: ${ props => props.bold ? "600" : "100" };
-	color: ${ props => props.color ? props.color : "var(--color-gray-light)" };
+	color: ${ props => props.actived ? "var(--color-purple-light)" : "var(--color-gray-light)" };
 	position: relative;
 	width: 200px;
 	text-align: center;
