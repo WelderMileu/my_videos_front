@@ -18,9 +18,7 @@ const VideosFavorite = () => {
 			setLoad(true)
 		})();
 
-	},[])
-
-	console.log(item)
+	},[]);
 
 	if(!load) { 
 		return (

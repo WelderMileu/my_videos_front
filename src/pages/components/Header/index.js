@@ -13,7 +13,7 @@ const Header = () => {
 			<img src={Logo} alt="logo" />
 
 			{/* Botão para inserir um novo post */}
-			<BtnOutline color="var(--color-brown)">
+			<BtnOutline color="var(--color-purple-light)">
 				<FaPlus style={{ marginRight: "5px" }}/> 
 				New Video
 			</BtnOutline>

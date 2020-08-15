@@ -18,6 +18,7 @@ export const TextOptions = styled.p`
 	position: relative;
 	width: 200px;
 	text-align: center;
+	cursor: pointer;
 
 	&:before ${ props => {
 				if(props.actived) {

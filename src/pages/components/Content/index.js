@@ -7,6 +7,29 @@ import VideosFavorite from '../VideosFavorite';
 const Content = () => {
 	const [ page, setPage ] = useState(1);
 
+	// Alternando options selecionadas.
+	async function fillter() {
+		const OptionsMenu = await document.querySelectorAll('p');
+		const FullVideos = OptionsMenu[0];
+		const FavoriteVideos = OptionsMenu[1];
+
+		if (page === 1) {
+			FullVideos.classList.add('hOqFPX','jULatB')
+			FullVideos.classList.remove('fbNsco','cYtBFy')
+
+			FavoriteVideos.classList.remove('hOqFPX','jULatB')
+			FavoriteVideos.classList.add('fbNsco','cYtBFy')
+		} else {
+			FullVideos.classList.remove('hOqFPX','jULatB')
+			FullVideos.classList.add('fbNsco','cYtBFy')
+			
+			FavoriteVideos.classList.add('hOqFPX','jULatB')
+			FavoriteVideos.classList.remove('fbNsco','cYtBFy')
+		}
+	}
+
+	fillter()
+
 	return (
 		<React.Fragment>
 			<Container>
@@ -16,14 +39,14 @@ const Content = () => {
 					<TextOptions
 						onClick= { () => setPage(1) } 
 						bold 
-						color="var(--color-purple-light)"
-						>
+						actived
+						color="var(--color-purple-light)">
 						Todos os Videos
 					</TextOptions>
 					<TextOptions
 						onClick={() => setPage(2) }  
 						bold>
-						Favoritos
+						Videos Favoritos
 					</TextOptions>
 				</ViewOptions>
 			</Container>
