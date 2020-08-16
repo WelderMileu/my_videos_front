@@ -48,7 +48,7 @@ const VideosFull = () => {
 					{ 	
 						item.map(video => (
 							<Video
-								id={video._id }
+								id={ video._id }
 								key={ video._id } 
 								url={ video.url } 
 								title={ video.title }

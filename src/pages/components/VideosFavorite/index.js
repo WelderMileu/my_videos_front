@@ -9,18 +9,37 @@ import Video from '../Video';
 const VideosFavorite = () => {
 	const [item, setItem] = useState([]);
 	const [load, setLoad] = useState(false);
+	const [exist, setExist] = useState(0);
 
 	useEffect(() => {
 
+		// Listando os videos
 		(async function videos(){
 			const list = await axios.get('http://localhost:3000');
 			setItem(list.data);
 			setLoad(true)
+
 		})();
 
 
-	},[]);							
+	},[]);
 
+	useEffect(() => {
+
+		// Verificando se a algum video favorito no nosso estado
+		(async function verifyFavorite() {
+			await item.map(elem => {
+					if(elem.favorite === true) {
+						console.log(elem)
+						setExist(1)
+						console.log(exist)
+					}
+				})
+		})();
+
+	})							
+
+	// Loading da aplicação
 	if(!load) { 
 		return (
 			<LoadingPage>
@@ -33,22 +52,40 @@ const VideosFavorite = () => {
 				<p>Carregando ...</p> 
 			</LoadingPage>
 		)
+
+	}
+
+	// Verificando se há videos favoritos
+	if(exist === 0) {
+		return (
+			<LoadingPage>
+				<p 
+					style={{ fontWeight: 'Normal' }}>
+					Nenhum video foi encontrado ...
+				</p>
+			</LoadingPage>	
+		)
 	} else {
 		return (
 			<ContainerView>
-				{item.filter((item) => item.favorite === true)
-						.map(video => (
-							<Video 
+				{item.filter((item) => {
+						return item.favorite === true
+					}).map(video => (
+							<Video
+								id={ video._id } 
 								key={ video._id } 
 								url={ video.url } 
 								title={ video.title }
 								favorite={ video.favorite ? <FaStar /> : "" }
 							/>
+
 						))
 				}
+
 			</ContainerView>
 		)
 	}
 }
 
+// Exportando nosso component
 export default VideosFavorite;

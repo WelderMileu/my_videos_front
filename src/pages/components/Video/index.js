@@ -2,15 +2,21 @@ import React from 'react';
 import { FaPen, FaTrash } from 'react-icons/fa';
 import axios from 'axios';
 
-import { Card, CardTitle, Favorite, CardIcons, Icons } from './style'
+import { 
+	Card, 
+	CardTitle, 
+	Favorite, 
+	CardIcons, 
+	Icons 
+} from './style'
 
 const Video = props => {
 
 	// Função para deletar video
 	async function drop(id) {
-		const d = await axios.delete(`http://localhost:3000/delete?id=${id}`)
-								.then(() => alert(`ID: ${id} deletado com sucesso`))
-								.catch(error => alert(`Erro: ${error}`))
+		await axios.delete(`http://localhost:3000/delete?id=${id}`)
+						.then(() => alert(`ID: ${id} deletado com sucesso`))
+						.catch(error => alert(`Erro: ${error}`))
 	
 		// Recarregando a pagina assim que o item for deletado
 		// Achar uma melhor forma atualizando apenas o componet
