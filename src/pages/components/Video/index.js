@@ -27,13 +27,14 @@ const Video = props => {
 		<Card>
 			<CardIcons>
 				{/* Components para o aterar */}
-				<Icons color="var(--color-blue-light)">
+				<Icons 
+					color="var(--color-blue-light)">
 					<FaPen />
 				</Icons>
 
 				{/* Components para o deletar */}
 				<Icons 
-					color="var(--color-purple-light)" 
+					color="var(--color-blue)" 
 					onClick={() => drop(props.id)}>
 					<FaTrash />
 				</Icons>

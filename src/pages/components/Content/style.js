@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
 	margin: auto 10%;
-	border-bottom: 1px solid var(--color-gray-light)
+	border-bottom: 1px solid rgba(0,0,0,0.1);
 `;
 
 export const ViewOptions = styled.div`
@@ -14,7 +14,7 @@ export const ViewOptions = styled.div`
 export const TextOptions = styled.p`
 	padding: 10px 20px;
 	font-weight: ${ props => props.bold ? "600" : "100" };
-	color: ${ props => props.actived ? "var(--color-purple-light)" : "var(--color-gray-light)" };
+	color: ${ props => props.actived ? "var(--color-red)" : "var(--color-gray-light)" };
 	position: relative;
 	width: 200px;
 	text-align: center;
@@ -27,11 +27,11 @@ export const TextOptions = styled.p`
 							content:"";
 							position: absolute;
 							width: 100px;
-							height: 10px;
-							top: 47px;
+							height: 5px;
+							top: 49px;
 							right: 70px;
-							background-color: var(--color-purple-light);
-							border-radius: 20px;
+							background-color: var(--color-red);
+							border-radius: 100px;
 						}
 					`)
 				}

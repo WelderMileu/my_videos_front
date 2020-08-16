@@ -9,11 +9,11 @@ export const ContainerView = styled.div`
 	overflow: auto;
 	
 	&::-webkit-scrollbar {
-		width: 1rem;
+		width: 12px;
 	}
 
 	&::-webkit-scrollbar-thumb {
-		background-color: var(--color-purple-light);
+		background-color: var(--color-black-light);
 		border-radius: 20px;
 	}
 

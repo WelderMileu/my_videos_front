@@ -45,7 +45,7 @@ const VideosFavorite = () => {
 			<LoadingPage>
 				<ReactLoading 
 					type="spin"
-					color="var(--color-purple-light)"
+					color="var(--color-black)"
 					width="30px"
 					height="5px"
 				/>

@@ -12,7 +12,7 @@ export const CardTitle = styled.p`
 
 export const Favorite = styled.p`
 	font-size: 1.2rem;
-	color: var(--color-purple-light);
+	color: var(--color-red);
 	margin-top: 5px;
 	display: flex;
 	justify-content: flex-start;

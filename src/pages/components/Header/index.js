@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaPlus } from 'react-icons/fa';
 
-import Logo from '../../assets/images/logo.svg';
+import Logo from '../../assets/images/logo_footer.svg';
 import { BtnOutline } from '../../style';
 import { Navigator } from './style';
 
@@ -13,7 +13,7 @@ const Header = () => {
 			<img src={Logo} alt="logo" />
 
 			{/* Botão para inserir um novo post */}
-			<BtnOutline color="var(--color-purple-light)">
+			<BtnOutline color="var(--color-red)">
 				<FaPlus style={{ marginRight: "5px" }}/> 
 				New Video
 			</BtnOutline>

@@ -17,7 +17,7 @@ export const BtnOutline = styled.button`
 	padding: .375rem .75rem;
 	line-height: 1.5;
 	border: none;
-	border-radius: .25rem;
+	border-radius: 50px;
 	border: 1px solid ${ props => props.color ? props.color : "var(--color-gray-light)" };
 	color: ${ props => props.color ? props.color : "var(--color-gray-light)" };	
 	background-color: transparent;
@@ -25,7 +25,7 @@ export const BtnOutline = styled.button`
 	transition: .5s ease-in-out;
 
 	&:hover {
-		background-color: var(--color-purple-light);
+		background-color: ${ props => props.color  ? props.color : "var(--color-gray-light)" };
 		color: var(--color-white);
 		border: 1px solid var(--color-white);
 	}

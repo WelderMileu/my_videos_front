@@ -30,7 +30,7 @@ const VideosFull = () => {
 			<LoadingPage>
 				<ReactLoading 
 					type="spin"
-					color="var(--color-purple-light)"
+					color="var(--color-black)"
 					width="30px"
 					height="5px" 
 				/>
@@ -48,6 +48,7 @@ const VideosFull = () => {
 					{ 	
 						item.map(video => (
 							<Video
+								func="() => this.videos()"
 								id={ video._id }
 								key={ video._id } 
 								url={ video.url } 
