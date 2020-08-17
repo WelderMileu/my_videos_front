@@ -59,4 +59,10 @@ export const Button = styled.button`
 	align-items: center;
 	background-color: ${ props => props.color ? props.color : "var(--color-gray-light)" };
 	color: ${ props => props.color ? "var(--color-white)" : "var(--color-black)" };
+	cursor: pointer;
+	transition: .3s ease-in-out;
+
+	&:hover {
+		opacity: .8;
+	}
 `;

@@ -13,8 +13,8 @@ export const ViewOptions = styled.div`
 
 export const TextOptions = styled.p`
 	padding: 10px 20px;
-	font-weight: ${ props => props.bold ? "600" : "100" };
-	color: ${ props => props.actived ? "var(--color-red)" : "var(--color-gray-light)" };
+	font-weight: ${ props => props.actived ? "600" : "100" };
+	color: ${ props => props.actived ? "var(--color-black-light)" : "var(--color-gray-light)" };
 	position: relative;
 	width: 200px;
 	text-align: center;
@@ -28,9 +28,9 @@ export const TextOptions = styled.p`
 							position: absolute;
 							width: 100px;
 							height: 5px;
-							top: 49px;
-							right: 70px;
-							background-color: var(--color-red);
+							top: 51px;
+							right: 50px;
+							background-color: var(--color-black-light);
 							border-radius: 100px;
 						}
 					`)

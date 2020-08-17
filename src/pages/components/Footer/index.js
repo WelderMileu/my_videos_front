@@ -2,7 +2,7 @@ import React from 'react';
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 import { FooterContainer, SocialIcon, SocialMidia, LogoIconFooter } from './style';
-import LogoFooter from '../../assets/images/logo_footer.svg';
+import Logo from '../../assets/images/youtube.svg';
 
 const Footer = () => {
 	return (
@@ -22,7 +22,14 @@ const Footer = () => {
 
 			{/* A Sub-logo da nossa aplicação */}
 			<LogoIconFooter>
-				<img src={LogoFooter} alt="Footer icons"/>
+				<div style={{ 
+						display: "flex", 
+						justifyContent: "center",
+						alignItems: "center"
+					}}>
+					<img src={Logo} alt="logo" width="50"/>
+					<p style={{ marginLeft: "3px" }}> My Videos </p>
+				</div>
 			</LogoIconFooter>
 		</FooterContainer>
 	)

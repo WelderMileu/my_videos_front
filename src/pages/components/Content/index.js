@@ -15,7 +15,6 @@ const Content = () => {
 				<ViewOptions>
 					<TextOptions
 						onClick= {() => setPage(1) } 
-						bold 
 						actived={ page === 1 ? true : false }
 						>
 						Todos os Videos
@@ -23,7 +22,7 @@ const Content = () => {
 					<TextOptions
 						onClick={() => setPage(2) }
 						actived={ page === 1 ? false : true }  
-						bold>
+						>
 						Videos Favoritos
 					</TextOptions>
 				</ViewOptions>

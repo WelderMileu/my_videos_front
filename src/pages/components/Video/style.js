@@ -12,7 +12,7 @@ export const CardTitle = styled.p`
 
 export const Favorite = styled.p`
 	font-size: 1.2rem;
-	color: var(--color-red);
+	color: var(--color-blue-light);
 	margin-top: 5px;
 	display: flex;
 	justify-content: flex-start;
@@ -27,24 +27,25 @@ export const CardIcons = styled.div`
 export const Icons = styled.div`
 	width: 30px;
 	height: 30px;
-	border: 1px solid ${props => props.color ? props.color : "var(--color-gray-light)"};
 	display: flex;
+    border: 1px solid ${props => props.color ? props.color : "var(--color-gray-light)"};
+	border-radius: 50px;
 	justify-content: center;
 	align-items: center;
 	margin: 5px;
-	border-radius: 50px;
 	cursor: pointer;
 	transition: .5s ease-in-out;
+	background-color: ${ props => props.color ? props.color : "" };
 
 	svg {
 		font-size: 1rem;
-		color: ${props => props.color ? props.color : "var(--color-gray-light)"};
+		color: ${props => props.color ? "var(--color-white-light)" : "var(--color-gray-light)"};
 	}
 
 	&:hover {
-		background-color: ${props => props.color ? props.color : "var(--color-gray-light)"};
+		background-color: var(--color-white-light);
 		svg {
-			color: var(--color-white);
+			color: ${ props => props.color ? props.color : "var(--color-black-light)" };
 		}
 	}
 `;
