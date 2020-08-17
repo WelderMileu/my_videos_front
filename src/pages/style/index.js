@@ -13,7 +13,7 @@ export const BtnOutline = styled.button`
 	height: 50px;
 	text-align: center;
 	vertical-align: middle;
-	use-select: none;
+	user-select: none;
 	padding: .375rem .75rem;
 	line-height: 1.5;
 	border: none;
@@ -29,4 +29,34 @@ export const BtnOutline = styled.button`
 		color: var(--color-white);
 		border: 1px solid var(--color-white);
 	}
+`;
+
+export const Input = styled.input`
+	display: block;
+	width: 100%;
+	font-size: 1rem;
+	line-height: 1.5;
+	color: #495057;
+	background-clip: padding-box;
+	border: 1px solid #ced4da;
+	border-radius: .25rem;
+	padding: .375rem .75rem;
+	margin-top: 5px;
+`; 
+
+export const Button = styled.button`
+	display: inline-block;
+	font-weight: 400;
+	text-align: center;
+	user-select: none;
+	border: 1px solid transparent;
+	border-radius: .25rem;
+	padding: .375rem .75rem;
+	margin-top: 5px;
+	font-size: 1rem;
+	line-height: 1.5;
+	display: flex;
+	align-items: center;
+	background-color: ${ props => props.color ? props.color : "var(--color-gray-light)" };
+	color: ${ props => props.color ? "var(--color-white)" : "var(--color-black)" };
 `;

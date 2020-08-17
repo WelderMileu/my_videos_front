@@ -17,9 +17,8 @@ const Video = props => {
 		await axios.delete(`http://localhost:3000/delete?id=${id}`)
 						.then(() => alert(`ID: ${id} deletado com sucesso`))
 						.catch(error => alert(`Erro: ${error}`))
-	
-		// Recarregando a pagina assim que o item for deletado
-		// Achar uma melhor forma atualizando apenas o componet
+		
+						// Recarregando a pagina após o drop
 		window.location.reload()
 	}
 
@@ -27,15 +26,12 @@ const Video = props => {
 		<Card>
 			<CardIcons>
 				{/* Components para o aterar */}
-				<Icons 
-					color="var(--color-blue-light)">
+				<Icons color="var(--color-blue-light)">
 					<FaPen />
 				</Icons>
 
 				{/* Components para o deletar */}
-				<Icons 
-					color="var(--color-blue)" 
-					onClick={() => drop(props.id)}>
+				<Icons color="var(--color-blue)" onClick={() => drop(props.id)}>
 					<FaTrash />
 				</Icons>
 			</CardIcons>

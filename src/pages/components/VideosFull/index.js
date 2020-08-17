@@ -36,6 +36,7 @@ const VideosFull = () => {
 				/>
 				<p>Carregando ...</p> 
 			</LoadingPage>
+			
 		)
 	} else {
 

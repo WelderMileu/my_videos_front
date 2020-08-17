@@ -29,6 +29,7 @@ const GlobalStyle = createGlobalStyle`
 		font-size: 1.2rem;
 		height: 100vh;
 		width: 100%;
+		position: relative;
 	}
 
 	button, 
