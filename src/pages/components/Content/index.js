@@ -17,13 +17,13 @@ const Content = () => {
 						onClick= {() => setPage(1) } 
 						actived={ page === 1 ? true : false }
 						>
-						Todos os Videos
+						All Videos
 					</TextOptions>
 					<TextOptions
 						onClick={() => setPage(2) }
 						actived={ page === 1 ? false : true }  
 						>
-						Videos Favoritos
+						Favorite Videos
 					</TextOptions>
 				</ViewOptions>
 			</Container>

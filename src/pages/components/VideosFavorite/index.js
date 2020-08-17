@@ -49,7 +49,7 @@ const VideosFavorite = () => {
 					width="30px"
 					height="5px"
 				/>
-				<p>Carregando ...</p> 
+				<p>Loading ...</p> 
 			</LoadingPage>
 		)
 
@@ -61,7 +61,7 @@ const VideosFavorite = () => {
 			<LoadingPage>
 				<p 
 					style={{ fontWeight: 'Normal' }}>
-					Nenhum video foi encontrado ...
+					There are no videos ...
 				</p>
 			</LoadingPage>	
 		)
