@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaTimes } from "react-icons/fa";
 
 import { Input, Button } from '../../style';
 import { Formulario, TitleForm, InputGroupChecked } from './style';
 
-const FormularioAdd = () => {
-
+const FormularioAdd = props => {
     return (
-        <Formulario block={ true }>
-            <FaTimes />
-            <TitleForm>New Video</TitleForm>
+        <Formulario block={ props.block }>
+            <FaTimes onClick={ props.func } />
+            <TitleForm>
+                New Video
+            </TitleForm>
             <Input 
                 type="text"
                 placeholder="Title"
@@ -35,4 +36,5 @@ const FormularioAdd = () => {
     )
 };
 
+// Exportando o component
 export default FormularioAdd;

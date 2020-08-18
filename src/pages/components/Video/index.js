@@ -38,6 +38,7 @@ const Video = props => {
 
 			{/* Iframe que contem o video */}
 			<iframe 
+				title="my video"
 				width="460" 
 				height="215" 
 				src={props.url} 
