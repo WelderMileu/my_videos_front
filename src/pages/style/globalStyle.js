@@ -33,9 +33,11 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	button, 
-	input {
+	input,
+	label {
 		font-family: 'calibri', sans-serif;
 		font-size: 1.2rem;
+		box-sizing: border-box;
 	}
 `;
 

@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { FaTimes } from "react-icons/fa";
 
 import { Input, Button } from '../../style';
-import { Formulario } from './style';
+import { Formulario, TitleForm, InputGroupChecked } from './style';
 
 const FormularioAdd = () => {
+
     return (
-        <Formulario>
+        <Formulario block={ true }>
+            <FaTimes />
+            <TitleForm>New Video</TitleForm>
             <Input 
                 type="text"
                 placeholder="Title"
@@ -14,11 +18,17 @@ const FormularioAdd = () => {
                 type="text"
                 placeholder="Url"
             />
-            <Input 
-                type="checkbox"
-                placeholder="Url"
-            />
-            <Button color="var(--color-black-light)">
+            <InputGroupChecked>
+                <input 
+                    id="favorite"
+                    type="checkbox"
+                />
+                <label htmlFor="favorite" style={{ paddingLeft: "5px" }}> Favorite</label>
+            </InputGroupChecked>
+            <Button 
+                style={{ marginTop: "30px" }}
+                color="var(--color-black-light)"
+                >
                 Adicionar    
             </Button>
         </Formulario>

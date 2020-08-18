@@ -10,8 +10,8 @@ function App() {
 	return (
 		<React.Fragment>
 			<GlobalStyle />
-			<FormularioAdd />
 			<Header />
+			<FormularioAdd />
 			<Content />
 			<Footer />
 		</React.Fragment>		
