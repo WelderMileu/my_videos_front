@@ -1,14 +1,20 @@
-## Contruindo uma aplicação front-end videos.
+## APLICAÇÃO WEB FEITA EM REACT JS DE VIDEOS.
+[![npm](https://img.shields.io/npm/v/@unform/core.svg?color=%237159c1)](https://www.npmjs.com/package/@unform/core)<space><space>
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
-- Essa aplicação e um crud, que tem como finalidade adicionar os que videos de minha preferencia separando videos favoritos de todos os vidios todos adicionados por clinte final.
+&nbsp;
+> Descrição
 
-#### Tecnologias usadas na aplicação
+Essa é aplicação **React JS** desenvolvida em **Getsby**, foi feito um crud contendo videos do youtube.
 
-- React JS
-- styled-componets
-- axios
-- Gatsby
+&nbsp;
+#### Tecnologias usadas.
 
-#### Api usada na aplicação
+* React JS
+* Gatsby
+* styled-componets(lib)
+* axios(lib)
+* unForm(lib)
 
-https://{api}.herokuapp.com/
+&nbsp;
+APLICAÇÃO EM DESENVOLVIMENTO
