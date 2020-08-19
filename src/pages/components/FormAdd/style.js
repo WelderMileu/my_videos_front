@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Formulario = styled.div`
+export const Formulario = styled.form`
   width: 50%;
   display: ${ props => props.block ? "flex" : "none" };
   border: 1px solid var(--color-gray-light);
