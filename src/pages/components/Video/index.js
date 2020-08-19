@@ -42,9 +42,9 @@ const Video = props => {
 				width="460" 
 				height="215" 
 				src={props.url} 
-				frameborder="0" 
+				frameBorder="0" 
 				allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
-				allowfullscreen>
+				allowFullScreen>
 			</iframe>
 			<CardTitle>{ props.title } </CardTitle>
 			<Favorite>{ props.favorite }</Favorite>

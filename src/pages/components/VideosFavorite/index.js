@@ -30,9 +30,7 @@ const VideosFavorite = () => {
 		(async function verifyFavorite() {
 			await item.map(elem => {
 					if(elem.favorite === true) {
-						console.log(elem)
 						setExist(1)
-						console.log(exist)
 					}
 				})
 		})();

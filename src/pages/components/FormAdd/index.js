@@ -6,13 +6,23 @@ import { Input, Button } from '../../style';
 import { Formulario, TitleForm, InputGroupChecked } from './style';
 
 const FormularioAdd = props => {
+    // Methods de formulario do unForm
     const { register, errors , handleSubmit } = useForm();
-    const onSubmit = data => console.log(data);
+    
+    const onSubmit = data => {
+        console.log(data);
+        // Pegar a url para adicionar vidios
+        // usar o axios para fazer as requisições
+    } 
 
     return (
         <Formulario block={ props.block } onSubmit={handleSubmit(onSubmit)}>
+            {/* icone para fechar o formulario */}
             <FaTimes onClick={ props.func } />
+
+            {/* Titulo do nosso formulario */}
             <TitleForm>New Video</TitleForm>
+
             <Input 
                 type="text"
                 placeholder="Title"
@@ -28,7 +38,7 @@ const FormularioAdd = props => {
                 ref={register({ required: true })}
             />
             { errors.url && "Esta campo e Obrigatorio" }
-            
+
             <InputGroupChecked>
                 <input 
                     id="favorite"
@@ -36,8 +46,14 @@ const FormularioAdd = props => {
                     name="favorite"
                     ref={register}
                 />
-                <label htmlFor="favorite" style={{ paddingLeft: "5px" }}> Favorite</label>
+
+                <label 
+                    htmlFor="favorite" 
+                    style={{ paddingLeft: "5px" }}> 
+                    Favorite
+                </label>
             </InputGroupChecked>
+
             <Button 
                 type="submit"
                 style={{ marginTop: "30px" }}
