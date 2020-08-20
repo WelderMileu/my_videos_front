@@ -1,9 +1,10 @@
 import React from 'react';
 import { FaTimes } from "react-icons/fa";
 import { useForm } from "react-hook-form";
+import axios from 'axios';
 
 import { Input, Button } from '../../style';
-import { Formulario, TitleForm, InputGroupChecked } from './style';
+import { Formulario, TitleForm, InputGroupChecked, InputError } from './style';
 
 const FormularioAdd = props => {
     // Methods de formulario do unForm
@@ -11,8 +12,13 @@ const FormularioAdd = props => {
     
     const onSubmit = data => {
         console.log(data);
-        // Pegar a url para adicionar vidios
-        // usar o axios para fazer as requisições
+        const urlPost = `http://localhost:3000/post/?title=${data.title}&url=${data.url}&favorite=${data.favorite}`;
+        axios.post(urlPost)
+                .then(() => {
+                    console.log('Dados Enviados com sucesso')
+                }).catch(err => {
+                    console.log(`Erro: ${err}`);
+                })
     } 
 
     return (
@@ -29,7 +35,7 @@ const FormularioAdd = props => {
                 name="title"
                 ref={register({ required:true })}
             />
-            { errors.title && "Este campo e Obrigatorio" }
+            { errors.title && <InputError>Este campo e Obrigatorio</InputError> }
 
             <Input 
                 type="text"
@@ -37,7 +43,7 @@ const FormularioAdd = props => {
                 name="url"
                 ref={register({ required: true })}
             />
-            { errors.url && "Esta campo e Obrigatorio" }
+            { errors.url && <InputError>Esta campo e Obrigatorio</InputError> }
 
             <InputGroupChecked>
                 <input 

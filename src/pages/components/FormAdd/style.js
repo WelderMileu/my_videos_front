@@ -32,3 +32,18 @@ export const InputGroupChecked = styled.div`
   align-items: center;
   margin-top: 30px;
 `;
+
+export const InputError = styled.p`
+  width: 50%;
+  background-color: var(--color-blue);
+  color: var(--color-white);
+  padding: 5px;
+  margin: 10px 0px;
+  border-radius: .25rem;
+  text-align: center;
+  opacity: .8;
+
+  @media(max-width: 1048px) {
+    width: 100%;
+  }
+`;
