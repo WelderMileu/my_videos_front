@@ -10,15 +10,19 @@ const FormularioAdd = props => {
     // Methods de formulario do unForm
     const { register, errors , handleSubmit } = useForm();
     
-    const onSubmit = data => {
+    // Adicionando nossos videos a base de dados.
+    // Erro na url ao adicionar os dados
+    // Não esta reconhecendo os parametros passados pela url
+    const onSubmit = async (data) => {
         console.log(data);
-        const urlPost = `http://localhost:3000/post/?title=${data.title}&url=${data.url}&favorite=${data.favorite}`;
-        axios.post(urlPost)
-                .then(() => {
-                    console.log('Dados Enviados com sucesso')
-                }).catch(err => {
-                    console.log(`Erro: ${err}`);
+        
+        const urlPost = `http://localhost:3000/post`; 
+        await axios.post(urlPost, data)
+                .then(res => {
+                    console.log(res)
+                    console.log(res.data)
                 })
+                .catch(err => console.log(`Erro: ${err}`));
     } 
 
     return (
