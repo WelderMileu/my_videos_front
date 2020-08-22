@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { FaPen, FaTrash } from 'react-icons/fa';
 import axios from 'axios';
 
@@ -10,7 +10,10 @@ import {
 	Icons 
 } from './style'
 
+import FormularioUpdate from '../FormUpdate';
+
 const Video = props => {
+	const [ open, setOpen ] = useState(false);
 
 	// Função para deletar video
 	async function drop(id) {
@@ -22,16 +25,26 @@ const Video = props => {
 		window.location.reload()
 	}
 
+	function update(id) {
+		setOpen(true)
+		console.log(id);
+	}
+
 	return (
 		<Card>
 			<CardIcons>
 				{/* Components para o aterar */}
-				<Icons color="var(--color-blue-light)">
+				<Icons 
+					color="var(--color-blue-light)"
+					onClick={ () => update(props.id) }
+					>
 					<FaPen />
 				</Icons>
 
 				{/* Components para o deletar */}
-				<Icons color="var(--color-blue)" onClick={() => drop(props.id)}>
+				<Icons 
+					color="var(--color-blue)" 
+					onClick={() => drop(props.id)}>
 					<FaTrash />
 				</Icons>
 			</CardIcons>
@@ -48,6 +61,13 @@ const Video = props => {
 			</iframe>
 			<CardTitle>{ props.title } </CardTitle>
 			<Favorite>{ props.favorite }</Favorite>
+
+			<FormularioUpdate 
+				block={ open } 
+				close={ () => setOpen(false) }
+				title={ props.title }
+				url={ props.url }
+			/>
 		</Card>
 	)
 }

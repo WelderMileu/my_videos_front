@@ -11,11 +11,9 @@ const FormularioAdd = props => {
     const { register, errors , handleSubmit } = useForm();
     
     // Adicionando nossos videos a base de dados.
-    // Erro na url ao adicionar os dados
-    // Não esta reconhecendo os parametros passados pela url
     const onSubmit = async (data) => {
         console.log(data);
-        
+
         const urlPost = `http://localhost:3000/post`; 
         await axios.post(urlPost, data)
                 .then(res => {
@@ -28,7 +26,7 @@ const FormularioAdd = props => {
     return (
         <Formulario block={ props.block } onSubmit={handleSubmit(onSubmit)}>
             {/* icone para fechar o formulario */}
-            <FaTimes onClick={ props.func } />
+            <FaTimes onClick={ props.close } />
 
             {/* Titulo do nosso formulario */}
             <TitleForm>New Video</TitleForm>

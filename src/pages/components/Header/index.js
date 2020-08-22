@@ -12,19 +12,29 @@ const Header = () => {
 	return (
 		<Navigator>
 			<LogoContainer>
-				<img src={Logo} alt="logo" width="50"/>
-				<p style={{ marginLeft: "3px" }}> My Videos </p>
+				<img 
+					src={Logo} 
+					alt="logo" 
+					width="50"
+				/>
+
+				<p style={{ marginLeft: "3px" }}> 
+					My Videos 
+				</p>
 			</LogoContainer>
 
 			{/* Botão para inserir um novo post */}
 			<Button
-				onClick={()=> setOpen(true) } 
+				onClick={()=> setOpen(true) } // Função para abrir o formulario de adicionar video
 				color="var(--color-black-light)"
 			>
 				<FaPlus style={{ marginRight: "5px" }}/> 
 				New Video
 			</Button>
-			<FormularioAdd block={ open } func={() => setOpen(false)}/>
+			<FormularioAdd 
+				block={ open } 
+				close={() => setOpen(false)}
+			/>
 		</Navigator>
 	)
 }
