@@ -12,7 +12,7 @@ import {
 
 import FormularioUpdate from '../FormUpdate';
 
-const Video = props => {
+const Video: React.FC = props => {
 	const [ open, setOpen ] = useState(false);
 
 	// Função para deletar video

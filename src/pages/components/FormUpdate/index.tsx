@@ -6,7 +6,7 @@ import { FaTimes } from "react-icons/fa";
 import { Input, Button } from '../../style';
 import { Formulario, TitleForm, InputGroupChecked } from '../FormAdd/style';
 
-const FormularioUpdate = props => {
+const FormularioUpdate: React.FC = props => {
     // Arrumar uma forma de colocar o favorito como valor no formulario
     
     return (

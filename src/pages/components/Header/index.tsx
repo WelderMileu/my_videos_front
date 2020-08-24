@@ -6,7 +6,7 @@ import { Button } from '../../style';
 import { Navigator, LogoContainer } from './style';
 import FormularioAdd from '../FormAdd';
 
-const Header = () => {
+const Header: React.FC = () => {
 	const [open, setOpen] = useState(false)
 
 	return (

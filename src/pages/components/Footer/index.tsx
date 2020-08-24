@@ -4,11 +4,9 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import { FooterContainer, SocialIcon, SocialMidia, LogoIconFooter } from './style';
 import Logo from '../../assets/images/youtube.svg';
 
-const Footer = () => {
+const Footer: React.FC = () => {
 	return (
 		<FooterContainer>
-		
-			{/* Icones da minhas redes sociais de development */}
 			<SocialMidia>
 				<SocialIcon>
 					<FaGithub />

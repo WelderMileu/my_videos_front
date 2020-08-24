@@ -6,7 +6,7 @@ import { FaStar } from 'react-icons/fa';
 import { ContainerView, LoadingPage } from '../VideosFull/style';
 import Video from '../Video';
 
-const VideosFavorite = () => {
+const VideosFavorite: React.FC = () => {
 	const [item, setItem] = useState([]);
 	const [load, setLoad] = useState(false);
 	const [exist, setExist] = useState(0);
