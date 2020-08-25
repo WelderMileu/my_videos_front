@@ -12,7 +12,6 @@ Essa é aplicação **React JS** desenvolvida em **Getsby**, foi feito um crud c
 
 * React JS
 * Gatsby
-* TypeScript
 * styled-componets(lib)
 * axios(lib)
 * unForm(lib)

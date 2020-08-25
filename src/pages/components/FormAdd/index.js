@@ -6,7 +6,7 @@ import axios from 'axios';
 import { Input, Button } from '../../style';
 import { Formulario, TitleForm, InputGroupChecked, InputError } from './style';
 
-const FormularioAdd: React.FC = props => {
+const FormularioAdd = props => {
     // Methods de formulario do unForm
     const { register, errors , handleSubmit } = useForm();
     

@@ -6,7 +6,7 @@ import { FaStar } from 'react-icons/fa';
 import { ContainerView, LoadingPage } from './style';
 import Video from '../Video';
 
-const VideosFull: React.FC = () => {
+const VideosFull = () => {
 	const [item, setItem] = useState([]); // Estado para armazenar os videos
 	const [load, setLoad] = useState(false); // Estado de loading
 

@@ -4,7 +4,7 @@ import { Container, ViewOptions, TextOptions } from './style';
 import VideosFull from '../VideosFull';
 import VideosFavorite from '../VideosFavorite';
 
-const Content: React.FC = () => {
+const Content = () => {
 	const [ page, setPage ] = useState(1);
 
 	return (
