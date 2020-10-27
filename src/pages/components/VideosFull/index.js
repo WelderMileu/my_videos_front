@@ -14,7 +14,7 @@ const VideosFull = () => {
 
 		// Capturando nossos videos da nossa base de dados e setando ao nosso estado.
 		(async function videos(){
-			const list = await axios.get('http://localhost:3000');
+			const list = await axios.get('https://app-listvideo.herokuapp.com/');
 			setItem(list.data);
 			setLoad(true)
 		})();

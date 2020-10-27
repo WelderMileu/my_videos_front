@@ -15,7 +15,7 @@ const VideosFavorite = () => {
 
 		// Listando os videos
 		(async function videos(){
-			const list = await axios.get('http://localhost:3000');
+			const list = await axios.get('https://app-listvideo.herokuapp.com');
 			setItem(list.data);
 			setLoad(true)
 

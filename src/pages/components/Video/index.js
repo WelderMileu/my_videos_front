@@ -17,7 +17,7 @@ const Video = props => {
 
 	// Função para deletar video
 	async function drop(id) {
-		await axios.delete(`http://localhost:3000/delete?id=${id}`)
+		await axios.delete(`https://app-listvideo.herokuapp.com/delete?id=${id}`)
 						.then(() => alert(`ID: ${id} deletado com sucesso`))
 						.catch(error => alert(`Erro: ${error}`))
 		

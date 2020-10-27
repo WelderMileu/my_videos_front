@@ -14,7 +14,7 @@ const FormularioAdd = props => {
     const onSubmit = async (data) => {
         console.log(data);
 
-        const urlPost = `http://localhost:3000/post`; 
+        const urlPost = `https://app-listvideo.herokuapp.com/post`; 
         await axios.post(urlPost, data)
                 .then(res => {
                     console.log(res)
